@@ -3,7 +3,8 @@
 // have been an email to /output/entry.txt. Deterministic: no clock,
 // no randomness, no network, no environment reads.
 // Gate: the line is 145 chars, one line, no trailing newline —
-// inside the sealed scorer's 1–200 char window.
+// inside the sealed scorer's 1–200 char window. The em dash is
+// 3 bytes in UTF-8, so the file is 147 bytes for 145 characters.
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const LINE =
